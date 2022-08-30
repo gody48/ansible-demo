@@ -15,7 +15,7 @@
       var: yum_output
 
   - name: check update using shell
-    shell: yum --security check-update
+    command: yum --security check-update
     register: regshell
 
   - name: show that yum output
