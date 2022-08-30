@@ -13,3 +13,11 @@
   - name: show that yum output
     debug:
       var: yum_output
+
+  - name: check update using shell
+    shell: yum --security check-update
+    register: regshell
+
+  - name: show that yum output
+    debug:
+      var: regshell
