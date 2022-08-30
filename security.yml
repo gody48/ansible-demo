@@ -1,0 +1,9 @@
+---
+- name: installing httpd
+  hosts: all
+  become: yes
+  tasks: 
+  - name: Updating security 
+    yum: 
+      security: yes
+      state: latest
