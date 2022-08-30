@@ -7,7 +7,7 @@
     yum: 
       security: yes
       state: latest
-#    check_mode: yes
+    check_mode: yes
     register: yum_output
 
   - name: show that yum output
