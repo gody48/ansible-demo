@@ -7,3 +7,10 @@
     yum: 
       security: yes
       state: latest
+    check_mode: yes
+    register: yum_output
+    become: true
+
+  - name: show that yum output
+    debug:
+      var: yum_output
